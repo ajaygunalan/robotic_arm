@@ -1,0 +1,528 @@
+<robot
+  name="cool400_description">
+  <link
+    name="arm_base_link">
+    <inertial>
+      <origin
+        xyz="-0.000364528814224573 -1.03857014949194E-06 0.0227753456963686"
+        rpy="0 0 0" />
+      <mass
+        value="0.544610518425444" />
+      <inertia
+        ixx="0.00160528244918119"
+        ixy="-1.85760406720394E-08"
+        ixz="-5.02140835455057E-06"
+        iyy="0.00161892628639683"
+        iyz="1.06196401459497E-08"
+        izz="0.00260882319732084" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cool400_description/meshes/arm_base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0980392156862745 0.0980392156862745 0.0980392156862745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cool400_description/meshes/arm_base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link1">
+    <inertial>
+      <origin
+        xyz="1.72805095895595E-05 -7.35348032465666E-11 0.054895415593879"
+        rpy="0 0 0" />
+      <mass
+        value="0.160291475855654" />
+      <inertia
+        ixx="0.000153432015115959"
+        ixy="-9.19401346618341E-07"
+        ixz="-3.37142397391412E-06"
+        iyy="0.000186664859772704"
+        iyz="6.22347313610884E-13"
+        izz="0.000115100969503561" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cool400_description/meshes/link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0980392156862745 0.0980392156862745 0.0980392156862745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cool400_description/meshes/link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.046498"
+      rpy="0 0 0" />
+    <parent
+      link="arm_base_link" />
+    <child
+      link="link1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.617"
+      upper="2.617"
+      effort="10"
+      velocity="10" />
+    <dynamics
+      damping="1"
+      friction="0" />
+  </joint>
+  <link
+    name="link2">
+    <inertial>
+      <origin
+        xyz="-0.00015502 1.0775E-09 0.07592"
+        rpy="0 0 0" />
+      <mass
+        value="0.13845" />
+      <inertia
+        ixx="9.4175E-05"
+        ixy="5.1543E-11"
+        ixz="-1.2375E-05"
+        iyy="0.00014388"
+        iyz="-1.7571E-11"
+        izz="9.0546E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cool400_description/meshes/link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.098039 0.098039 0.098039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cool400_description/meshes/link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="revolute">
+    <origin
+      xyz="0 0 0.084603"
+      rpy="0 0 0" />
+    <parent
+      link="link1" />
+    <child
+      link="link2" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="10"
+      velocity="10" />
+    <dynamics
+      damping="1"
+      friction="0" />
+  </joint>
+  <link
+    name="link3">
+    <inertial>
+      <origin
+        xyz="-0.000794719659955388 2.41139091097797E-06 0.0456843328851089"
+        rpy="0 0 0" />
+      <mass
+        value="0.058447433743844" />
+      <inertia
+        ixx="2.17621760178446E-05"
+        ixy="-8.44740101890547E-07"
+        ixz="8.26619005114839E-07"
+        iyy="2.93727008510936E-05"
+        iyz="2.72407987656786E-09"
+        izz="1.76126073907668E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cool400_description/meshes/link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0980392156862745 0.0980392156862745 0.0980392156862745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cool400_description/meshes/link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3"
+    type="revolute">
+    <origin
+      xyz="-0.00945 0 0.091"
+      rpy="0 0 0" />
+    <parent
+      link="link2" />
+    <child
+      link="link3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.617"
+      upper="2.617"
+      effort="10"
+      velocity="10" />
+    <dynamics
+      damping="1"
+      friction="0" />
+  </joint>
+  <link
+    name="link4">
+    <inertial>
+      <origin
+        xyz="0.00025286 0.00018451 0.057444"
+        rpy="0 0 0" />
+      <mass
+        value="0.056599" />
+      <inertia
+        ixx="3.316E-05"
+        ixy="-2.9854E-11"
+        ixz="-6.3488E-09"
+        iyy="3.2346E-05"
+        iyz="4.5545E-07"
+        izz="1.2926E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cool400_description/meshes/link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.098039 0.098039 0.098039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cool400_description/meshes/link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint4"
+    type="revolute">
+    <origin
+      xyz="0 0 0.0605"
+      rpy="0 0 0" />
+    <parent
+      link="link3" />
+    <child
+      link="link4" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.91"
+      upper="1.91"
+      effort="10"
+      velocity="10" />
+    <dynamics
+      damping="1"
+      friction="0" />
+  </joint>
+  <link
+    name="link5">
+    <inertial>
+      <origin
+        xyz="0.000250014638821461 -0.00023245263217242 0.0207484903462006"
+        rpy="0 0 0" />
+      <mass
+        value="0.00766568678893778" />
+      <inertia
+        ixx="2.17608678613536E-06"
+        ixy="4.05419531213688E-14"
+        ixz="1.31803645258404E-12"
+        iyy="3.7947013351969E-06"
+        iyz="4.55793621657488E-08"
+        izz="3.3930962131965E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cool400_description/meshes/link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0980392156862745 0.0980392156862745 0.0980392156862745 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cool400_description/meshes/link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint5"
+    type="revolute">
+    <origin
+      xyz="0.00025 0 0.078"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="link4" />
+    <child
+      link="link5" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.91"
+      upper="1.91"
+      effort="10"
+      velocity="10" />
+    <dynamics
+      damping="1"
+      friction="0" />
+  </joint>
+  <link
+    name="link6">
+    <inertial>
+      <origin
+        xyz="-0.010437 2.3015E-05 0.046336"
+        rpy="0 0 0" />
+      <mass
+        value="0.10308" />
+      <inertia
+        ixx="6.9221E-05"
+        ixy="6.0734E-09"
+        ixz="4.8227E-06"
+        iyy="8.6341E-05"
+        iyz="1.8346E-08"
+        izz="3.1578E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cool400_description/meshes/link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.098039 0.098039 0.098039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cool400_description/meshes/link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint6"
+    type="revolute">
+    <origin
+      xyz="0.00025 0 0.031"
+      rpy="0 0 3.1416" />
+    <parent
+      link="link5" />
+    <child
+      link="link6" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.617"
+      upper="2.617"
+      effort="10"
+      velocity="10" />
+    <dynamics
+      damping="1"
+      friction="0" />
+  </joint>
+  <link
+    name="left_gripper_link">
+    <inertial>
+      <origin
+        xyz="0.045998 -0.65213 0.088409"
+        rpy="0 0 0" />
+      <mass
+        value="0.0045031" />
+      <inertia
+        ixx="7.8431E-07"
+        ixy="-1.9894E-10"
+        ixz="6.3271E-10"
+        iyy="2.0857E-07"
+        iyz="5.3244E-08"
+        izz="9.3388E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cool400_description/meshes/left_gripper_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.098039 0.098039 0.098039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cool400_description/meshes/left_gripper_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_gripper_joint"
+    type="prismatic">
+    <origin
+      xyz="-0.070428 0.046018 -0.54501"
+      rpy="-1.5708 0 -1.5708" />
+    <parent
+      link="link6" />
+    <child
+      link="left_gripper_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.02"
+      upper="0"
+      effort="10"
+      velocity="10" />
+  </joint>
+  <link
+    name="right_gripper_link">
+    <inertial>
+      <origin
+        xyz="0.045884 -0.65213 0.049255"
+        rpy="0 0 0" />
+      <mass
+        value="0.0045031" />
+      <inertia
+        ixx="7.8463E-07"
+        ixy="1.9894E-10"
+        ixz="6.2601E-10"
+        iyy="2.0889E-07"
+        iyz="-5.4839E-08"
+        izz="9.3388E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cool400_description/meshes/right_gripper_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.098039 0.098039 0.098039 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://cool400_description/meshes/right_gripper_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_gripper_joint"
+    type="prismatic">
+    <origin
+      xyz="-0.070428 0.046018 -0.54501"
+      rpy="-1.5708 0 -1.5708" />
+    <parent
+      link="link6" />
+    <child
+      link="right_gripper_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0.02"
+      effort="10"
+      velocity="10" />
+    <dynamics
+      damping="1"
+      friction="0" />
+  </joint>
+</robot>

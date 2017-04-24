@@ -1,0 +1,2 @@
+cool400_description
+-DCATKIN_DEVEL_PREFIX=/home/ajay/ASIMOV/kdl_ompl_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ajay/ASIMOV/kdl_ompl_ws/install -G Unix Makefiles
