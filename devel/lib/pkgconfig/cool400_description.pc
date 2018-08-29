@@ -1,8 +1,0 @@
-prefix=/home/ajay/ASIMOV/kdl_ompl_ws/devel
-
-Name: cool400_description
-Description: Description of cool400_description
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/ajay/ASIMOV/kdl_ompl_ws/devel/lib 
-Requires: 
