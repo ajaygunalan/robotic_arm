@@ -27,7 +27,7 @@ To simulate the robot launch the following:
 
 
   ```
-  roslaunch cool400_description display.launch 
+  roslaunch cool400_description gazebo.launch 
   ```
 
 
