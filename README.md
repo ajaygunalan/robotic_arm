@@ -2,7 +2,7 @@ Robotic Arm
 ===========
 
 ## Installation 
-This will assume you have ROS, Gazebo and Rviz installed on a Ubuntu system. Go to the src directory of the workspace and then clone this repo
+This will assume you have ROS, Gazebo, Rviz and MoveIt installed on a Ubuntu system. Go to the src directory of the workspace and then clone this repo
 
   	 git clone https://github.com/ajaygunalan/robotic_arm 
 
