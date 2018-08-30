@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="hardware_interface" default="PositionJointInterface"/> 
+  <arg name="robot_name" default="iiwa"/>
+  <arg name="origin_xyz" default="'0 0 0'"/> <!-- Note the syntax to pass a vector -->
+  <arg name="origin_rpy" default="'0 0 0'"/>
+  <arg name="gui" default="True" />
+
+     
+     <!-- This loads the URDF with the given hardware interface and robot name into the ROS Parameter Server -->
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find iiwa_description)/urdf/iiwa7.urdf.xacro' hardware_interface:=$(arg hardware_interface) robot_name:=$(arg robot_name) origin_xyz:=$(arg origin_xyz) origin_rpy:=$(arg origin_rpy)" />
+
+  <param name="use_gui" value="$(arg gui)"/>
+
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+  
+    <!-- push robot_description to factory and spawn robot in gazebo -->
+  <node name="model_spawnner_node" pkg="gazebo_ros" type="spawn_model" output="screen"  args="-urdf -param robot_description -model robot"  />
+
+    <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <!-- more default parameters can be changed here -->
+    <arg name="paused" value="true"/>
+  </include>
+
+
+</launch> 

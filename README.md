@@ -16,20 +16,30 @@ This will assume you have ROS, Gazebo and Rviz installed on a Ubuntu system. Go 
 To visualize the model of the robot with a gripper, launch the following:
 
   ```
-  roslaunch cool400_description display.launch 
+  roslaunch iiwa_description display.launch 
   ```
 
 You can then use the sliders to change the joint values and the gripper values.
 
-## Simulation in Gazebo
+## Spawn in Gazebo
 
-To simulate the robot launch the following:
+To spawn the robot launch the following:
 
 
   ```
-  roslaunch cool400_description gazebo.launch 
+  roslaunch iiwa_description gazebo.launch 
   ```
 
+## Simulate in MoveIt
+
+To simulate the robot in MoveIt launch the following:
 
 
+  ```
+  roslaunch iiwa_moveit_config demo.launch 
+  ```
 
+## To Do list
+
+* Write controllers to simulate in gazebo
+* Interface Gazebo and MoveIt, so that Motion in MoveIt is reflected in Gazebo
