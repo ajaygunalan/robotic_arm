@@ -44,3 +44,7 @@ To simulate the robot in MoveIt launch the following:
 * Write controllers to simulate in gazebo
 * Interface Gazebo and MoveIt, so that Motion in MoveIt is reflected in Gazebo
 * Study more about the architecture of Gazebo & MoveIt Interface and also on concepts such as ROS control, ROS Parameter Server and Joint Trajectory Control
+
+## References
+
+1. [Motion Planning for Manipulators by Jeremy Zoss](http://aeswiki.datasys.swri.edu/rositraining/Exercises?action=AttachFile&do=get&target=ROS-I+Basic+Developer%E2%80%99s+Training+-+Session+3.pdf)
