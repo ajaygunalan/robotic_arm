@@ -15,7 +15,7 @@ This will assume you have ROS, Gazebo, Rviz and MoveIt installed on a Ubuntu sys
 
 To visualize the model of the robot with a gripper, launch the following:
 
-  ```
+  ```P
   roslaunch iiwa_description display.launch 
   ```
 
@@ -39,7 +39,29 @@ To simulate the robot in MoveIt launch the following:
   roslaunch iiwa_moveit_config demo.launch 
   ```
 
+## To Plan in MoveIt and Simulate the trajectroy in  Gazebo
+
+To simulate the robot in MoveIt launch the following:
+
+Open up a terminal, then launch the following:
+
+
+  ```
+  roslaunch iiwa_description gazebo.launch 
+  ```
+
+Open up another terminal, then launch the following:
+
+
+  ```
+  roslaunch iiwa_moveit_config iiwa_planning_execution.launch 
+  ``` 
+  
 ## To Do list
 
-* Write controllers to simulate in gazebo
-* Interface Gazebo and MoveIt, so that Motion in MoveIt is reflected in Gazebo
+* Write controllers to simulate in gazebop
+* Study more about the architecture of Gazebo & MoveIt Interface and also on concepts such as ROS control, ROS Parameter Server and Joint Trajectory Control
+
+## References
+
+1. [Motion Planning for Manipulators by Jeremy Zoss](http://aeswiki.datasys.swri.edu/rositraining/Exercises?action=AttachFile&do=get&target=ROS-I+Basic+Developer%E2%80%99s+Training+-+Session+3.pdf)

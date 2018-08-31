@@ -22,8 +22,14 @@
     <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <!-- more default parameters can be changed here -->
-    <arg name="paused" value="true"/>
+    <arg name="paused" value="false" />
   </include>
+
+    <!-- Load controllers & Controllers config -->
+  <group ns="iiwa">
+    <rosparam file="$(find iiwa_description)/controller/robotic_arm_controller.yaml" command="load" />
+    <node name="robot_controllers" pkg="controller_manager" type="spawner" args="joint_state_controller arm_controller"/>
+  </group>
 
 
 </launch> 
