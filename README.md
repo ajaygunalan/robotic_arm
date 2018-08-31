@@ -59,9 +59,13 @@ Open up another terminal, then launch the following:
   
 ## To Do list
 
-* Write controllers to simulate in gazebo
+* Write controllers to simulate the individual joint, & arm, in gazebo without using MoveIt.
 * Study more about the architecture of Gazebo & MoveIt Interface and also on concepts such as ROS control, ROS Parameter Server and Joint Trajectory Control
 
 ## References
 
 1. [Motion Planning for Manipulators by Jeremy Zoss](http://aeswiki.datasys.swri.edu/rositraining/Exercises?action=AttachFile&do=get&target=ROS-I+Basic+Developer%E2%80%99s+Training+-+Session+3.pdf)
+2. [https://github.com/RethinkRobotics/sawyer_simulator](https://github.com/RethinkRobotics/sawyer_simulator)
+3. [https://github.com/IFL-CAMP/iiwa_stack](https://github.com/IFL-CAMP/iiwa_stack)
+4. [https://github.com/kuka-isir/iiwa_description](https://github.com/kuka-isir/iiwa_description)
+5. [https://github.com/AS4SR/general_info/wiki/Basic-ROS-MoveIt!-and-Gazebo-Integration](https://github.com/AS4SR/general_info/wiki/Basic-ROS-MoveIt!-and-Gazebo-Integration)
