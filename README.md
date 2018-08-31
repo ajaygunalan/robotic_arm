@@ -69,3 +69,4 @@ Open up another terminal, then launch the following:
 3. [https://github.com/IFL-CAMP/iiwa_stack](https://github.com/IFL-CAMP/iiwa_stack)
 4. [https://github.com/kuka-isir/iiwa_description](https://github.com/kuka-isir/iiwa_description)
 5. [https://github.com/AS4SR/general_info/wiki/Basic-ROS-MoveIt!-and-Gazebo-Integration](https://github.com/AS4SR/general_info/wiki/Basic-ROS-MoveIt!-and-Gazebo-Integration)
+6. [[ROS Q&A] 003 - How to control a Gazebo simulated robot with MoveIt! (UR5) - Tutorial](https://www.youtube.com/watch?v=j6bBxfD_bYs&t=144s)
