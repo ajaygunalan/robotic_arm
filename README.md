@@ -59,7 +59,7 @@ Open up another terminal, then launch the following:
   
 ## To Do list
 
-* Write controllers to simulate the individual joint, & arm, in gazebo without using MoveIt.
+* Write controllers to control the individual joint, & arm, in gazebo without using MoveIt.
 * Study more about the architecture of Gazebo & MoveIt Interface and also on concepts such as ROS control, ROS Parameter Server and Joint Trajectory Control
 
 ## References
