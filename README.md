@@ -60,6 +60,16 @@ Open up another terminal, then launch the following:
 ## To Do list
 
 * Write controllers to control the individual joint, & arm, in gazebo without using MoveIt.
+* Follow these tutorial below:
+
+     1. [ROS Control + Gazebo](http://gazebosim.org/tutorials/?tut=ros_control)
+
+    2. [ROS Communication with Gazebo](http://gazebosim.org/tutorials/?tut=ros_comm)
+        
+    3. [ROS Plugins for Gazebo](http://gazebosim.org/tutorials/?tut=ros_plugins)
+        
+    4. [Advanced ROS Integration](http://gazebosim.org/tutorials/?tut=ros_advanced)
+        
 * Study more about the architecture of Gazebo & MoveIt Interface and also on concepts such as ROS control, ROS Parameter Server and Joint Trajectory Control
 
 ## References
