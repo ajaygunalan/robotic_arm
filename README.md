@@ -59,7 +59,7 @@ Open up another terminal, then launch the following:
   
 ## To Do list
 
-* Write controllers to simulate in gazebop
+* Write controllers to simulate in gazebo
 * Study more about the architecture of Gazebo & MoveIt Interface and also on concepts such as ROS control, ROS Parameter Server and Joint Trajectory Control
 
 ## References
