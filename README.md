@@ -59,9 +59,24 @@ Open up another terminal, then launch the following:
   
 ## To Do list
 
-* Write controllers to simulate in gazebop
+* Write controllers to control the individual joint, & arm, in gazebo without using MoveIt.
+* Follow these tutorial below:
+
+     1. [ROS Control + Gazebo](http://gazebosim.org/tutorials/?tut=ros_control)
+
+    2. [ROS Communication with Gazebo](http://gazebosim.org/tutorials/?tut=ros_comm)
+        
+    3. [ROS Plugins for Gazebo](http://gazebosim.org/tutorials/?tut=ros_plugins)
+        
+    4. [Advanced ROS Integration](http://gazebosim.org/tutorials/?tut=ros_advanced)
+        
 * Study more about the architecture of Gazebo & MoveIt Interface and also on concepts such as ROS control, ROS Parameter Server and Joint Trajectory Control
 
 ## References
 
 1. [Motion Planning for Manipulators by Jeremy Zoss](http://aeswiki.datasys.swri.edu/rositraining/Exercises?action=AttachFile&do=get&target=ROS-I+Basic+Developer%E2%80%99s+Training+-+Session+3.pdf)
+2. [https://github.com/RethinkRobotics/sawyer_simulator](https://github.com/RethinkRobotics/sawyer_simulator)
+3. [https://github.com/IFL-CAMP/iiwa_stack](https://github.com/IFL-CAMP/iiwa_stack)
+4. [https://github.com/kuka-isir/iiwa_description](https://github.com/kuka-isir/iiwa_description)
+5. [https://github.com/AS4SR/general_info/wiki/Basic-ROS-MoveIt!-and-Gazebo-Integration](https://github.com/AS4SR/general_info/wiki/Basic-ROS-MoveIt!-and-Gazebo-Integration)
+6. [[ROS Q&A] 003 - How to control a Gazebo simulated robot with MoveIt! (UR5) - Tutorial](https://www.youtube.com/watch?v=j6bBxfD_bYs&t=144s)
