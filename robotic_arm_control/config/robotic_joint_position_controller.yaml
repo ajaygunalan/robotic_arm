@@ -3,59 +3,42 @@ joint_state_controller:
   publish_rate: 125
   type: joint_state_controller/JointStateController
 
-            #No Error Comes Up
-# If type: position_controllers/JointPositionController
-# Then hardware_interface = PositionJointInterface
-
-            #No Error Comes Up
-# If type: position_controllers/JointPositionController
-# Then hardware_interface = EffortJointInterface
-
-            #Error Comes Up
-# If type: effort_controllers/JointPositionController
-# Then hardware_interface = EffortJointInterface
-
-            #Error Comes Up
-# If type: effort_controllers/JointPositionController
-# Then hardware_interface = PositionJointInterface
 
 #Position Controllers
 joint1_position_controller:
-  type: position_controllers/JointPositionController
+  type: effort_controllers/JointPositionController
   joint: iiwa_joint_1
   pid: {p: 100.0, i: 0.01, d: 10.0}
 
 joint2_position_controller:
-  type: position_controllers/JointPositionController
+  type: effort_controllers/JointPositionController
   joint: iiwa_joint_2
   pid: {p: 100.0, i: 0.01, d: 10.0}
 
 joint3_position_controller:
-  type: position_controllers/JointPositionController
+  type: effort_controllers/JointPositionController
   joint: iiwa_joint_3
   pid: {p: 100.0, i: 0.01, d: 10.0}
 
 joint4_position_controller:
-  type: position_controllers/JointPositionController
+  type: effort_controllers/JointPositionController
   joint: iiwa_joint_4
   pid: {p: 100.0, i: 0.01, d: 10.0}
 
 joint5_position_controller:
-  type: position_controllers/JointPositionController
+  type: effort_controllers/JointPositionController
   joint: iiwa_joint_5
   pid: {p: 100.0, i: 0.01, d: 10.0}
 
 joint6_position_controller:
-  type: position_controllers/JointPositionController
+  type: effort_controllers/JointPositionController
   joint: iiwa_joint_6
   pid: {p: 100.0, i: 0.01, d: 10.0}
 
 joint7_position_controller:
-  type: position_controllers/JointPositionController
+  type: effort_controllers/JointPositionController
   joint: iiwa_joint_7
   pid: {p: 100.0, i: 0.01, d: 10.0}
-
-
 
 
   # constraints:
