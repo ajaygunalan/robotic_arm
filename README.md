@@ -34,22 +34,17 @@ To spawn the robot in Gazebo, launch the following:
 
 ## To Control the arm in Gazebo
 
-To control individual joints in position mode, launch the following:
-
-launch the following:
-
+  1. To control individual joints in position mode, launch the following:
 
   ```
    roslaunch robotic_arm_control robotic_joint_position_gazebo_control.launch 
   ```
-
-To control individual joints in effort mode, launch the following:
+  2. To control individual joints in effort mode, launch the following:
 
   ```
     roslaunch robotic_arm_control robotic_joint_effort_gazebo_control.launch 
   ``` 
-
-To control the entire arm in trajectroy mode, launch the following::
+  3. To control the entire arm in trajectroy mode, launch the following::
 
   ```
     roslaunch robotic_arm_control robotic_arm_gazebo_control.launch 
