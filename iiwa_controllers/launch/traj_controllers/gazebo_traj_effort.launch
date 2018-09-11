@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
 
-  <arg name="hardware_interface" default="PositionJointInterface"/> 
+  <arg name="hardware_interface" default="EffortJointInterface"/> 
   <arg name="robot_name" default="iiwa"/>
   <arg name="origin_xyz" default="'0 0 0'"/> <!-- Note the syntax to pass a vector -->
   <arg name="origin_rpy" default="'0 0 0'"/>
@@ -14,7 +14,7 @@
   <param name="use_gui" value="$(arg gui)"/>
 
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
-  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
   
     <!-- push robot_description to factory and spawn robot in gazebo -->
   <node name="model_spawnner_node" pkg="gazebo_ros" type="spawn_model" output="screen"  args="-urdf -param robot_description -model robot"  />
@@ -26,10 +26,8 @@
   </include>
 
     <!-- Load controllers & Controllers config -->
-  <group ns="iiwa">
-    <rosparam file="$(find iiwa_description)/controller/robotic_arm_controller.yaml" command="load" />
-    <node name="robot_controllers" pkg="controller_manager" type="spawner" args="joint_state_controller arm_controller"/>
-  </group>
+    <rosparam file="$(find iiwa_controllers)/config/traj_controllers/traj_effort_controller.yaml" ns="iiwa" command="load" />
+    <node name="robot_controllers" pkg="controller_manager" type="spawner" ns="iiwa" args="joint_state_controller traj_effort_controller"/>
 
 
 </launch> 

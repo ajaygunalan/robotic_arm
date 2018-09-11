@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(robotic_arm_control)
+project(iiwa_controllers)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -104,7 +104,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES robotic_arm_control
+#  LIBRARIES iiwa_controllers
 #  CATKIN_DEPENDS controller_manager joint_state_controller robot_state_publisher
 #  DEPENDS system_lib
 )

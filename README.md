@@ -13,46 +13,58 @@ This will assume you have ROS, Gazebo, Rviz and MoveIt installed on a Ubuntu sys
      source ./devel/setup.bash
 
 
-## Visualization in RViz
+## To Visualization in RViz & Gazebo
 
 To visualize the model of the robot with a gripper, launch the following:
 
-  ```P
-  roslaunch iiwa_description display.launch 
+  ```
+  roslaunch iiwa_description rviz_spawn.launch
   ```
 
 You can then use the sliders to change the joint values and the gripper values.
 
-## Spawn in Gazebo 
-
-To spawn the robot launch the following:
+To spawn the robot in Gazebo, launch the following:
 
 
   ```
-  roslaunch iiwa_description gazebo.launch 
+   roslaunch iiwa_description gazebo_spawn.launch 
   ```
 
-## To Control the arm in Gazebo
+## To Control in Gazebo
 
-To control joints in position mode, launch the following:
-
-launch the following:
-
+1. To control individual joints in position mode, launch the following:
 
   ```
-   roslaunch robotic_arm_control robotic_joint_position_gazebo_control.launch 
+   roslaunch iiwa_controllers gazebo_joint_position.launch 
+  ```
+And the publish the position value to the desired joint (say joint 1) by:
+
+  ```
+   rostopic pub /iiwa/joint1_position_controller/command std_msgs/Float64  -- 10.0
   ```
 
-To control joints in effort mode, launch the following:
+
+2. To control individual joints in effort mode, launch the following:
 
   ```
-    roslaunch robotic_arm_control robotic_joint_effort_gazebo_control.launch 
+   roslaunch iiwa_controllers gazebo_effort_position.launch
+  ``` 
+And the publish the position value to the desired joint (say joint 1) by:
+
+  ```
+   rostopic pub /iiwa/joint1_effort_controller/command std_msgs/Float64  -- 10.0
+  ```
+
+3. To control the entire arm trajectory in position mode, launch the following::
+
+  ```
+   roslaunch iiwa_controllers gazebo_traj_position.launch  
   ``` 
 
-To control the entire arm in trajectroy mode,launch the following::
+4. To control the entire arm trajectory in effort mode, launch the following::
 
   ```
-    roslaunch robotic_arm_control robotic_arm_gazebo_control.launch 
+   roslaunch iiwa_controllers gazebo_traj_effort.launch  
   ``` 
 
 

@@ -1,0 +1,23 @@
+# Joint state controller (publish joint states)
+joint_state_controller:
+  publish_rate: 125
+  type: joint_state_controller/JointStateController
+
+
+# Trajectory controller
+arm_controller:
+  type: effort_controllers/JointTrajectoryController
+  joints: [iiwa_joint_1, iiwa_joint_2, iiwa_joint_3, iiwa_joint_4, iiwa_joint_5, iiwa_joint_6, iiwa_joint_7]
+
+
+  gains: # Required because we're controlling an effort interface
+    iiwa_joint_1: {p: 100, i: 10, d: 1}
+    iiwa_joint_2: {p: 100, i: 10, d: 1}
+    iiwa_joint_3: {p: 100, i: 10, d: 1}
+    iiwa_joint_4: {p: 100, i: 10, d: 1}
+    iiwa_joint_5: {p: 100, i: 10, d: 1}
+    iiwa_joint_6: {p: 100, i: 10, d: 1}
+    iiwa_joint_7: {p: 100, i: 10, d: 1}
+
+
+  

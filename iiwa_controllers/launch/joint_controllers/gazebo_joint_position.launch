@@ -27,10 +27,11 @@
 
     <!-- Load controllers & Controllers config -->
 
-  <rosparam  ns="/iiwa" file="$(find robotic_arm_control)/config/robotic_joint_position_controller.yaml" command="load" />
-  <node name="robot_controllers" pkg="controller_manager" ns="/iiwa" output="screen" type="spawner" 
+  <rosparam  ns="iiwa" file="$(find iiwa_controllers)/config/joint_controllers/joint_position_controller.yaml" command="load" />
+  <node name="robot_controllers" pkg="controller_manager" ns="iiwa" output="screen" type="spawner" 
       args="
         joint_state_controller
+
         joint1_position_controller
         joint2_position_controller
         joint3_position_controller 
