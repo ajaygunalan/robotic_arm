@@ -15,7 +15,7 @@ This will assume you have ROS, Gazebo, Rviz and MoveIt installed on a Ubuntu sys
 
 ## To Visualization in RViz & Gazebo
 
-To visualize the model of the robot with a gripper, launch the following:
+For Rviz launch the following:
 
   ```
   roslaunch iiwa_description rviz_spawn.launch
@@ -23,8 +23,7 @@ To visualize the model of the robot with a gripper, launch the following:
 
 You can then use the sliders to change the joint values and the gripper values.
 
-To spawn the robot in Gazebo, launch the following:
-
+For Gazebo launch the following:
 
   ```
    roslaunch iiwa_description gazebo_spawn.launch 
@@ -43,17 +42,17 @@ And the publish the position value to the desired joint (say joint 1) by:
    rostopic pub /iiwa/joint1_position_controller/command std_msgs/Float64  -- 10.0
   ```
 
-
 2. To control individual joints in effort mode, launch the following:
 
   ```
    roslaunch iiwa_controllers gazebo_effort_position.launch
   ``` 
-And the publish the position value to the desired joint (say joint 1) by:
+And the publish the effort value to the desired joint (say joint 1) by:
 
   ```
    rostopic pub /iiwa/joint1_effort_controller/command std_msgs/Float64  -- 10.0
   ```
+
 
 3. To control the entire arm trajectory in position mode, launch the following::
 
@@ -62,6 +61,7 @@ And the publish the position value to the desired joint (say joint 1) by:
   ``` 
 
 4. To control the entire arm trajectory in effort mode, launch the following::
+
 
   ```
    roslaunch iiwa_controllers gazebo_traj_effort.launch  
@@ -119,12 +119,10 @@ then launch, these files:
 
 
 
-
-
 ## To Do list
 
-* Enable effort control for each joints with MoveIt-Gazebo setup.
-P* Follow these tutorial below:
+* Check why Gazebo-Moveit setup is not working in effort mode ?.
+* Follow these tutorial below:
 
     1. [ROS Control + Gazebo](http://gazebosim.org/tutorials/?tut=ros_control)
 
