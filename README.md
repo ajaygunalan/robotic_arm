@@ -68,9 +68,9 @@ And the publish the effort value to the desired joint (say joint 1) by:
   ``` 
 
 
-## Simulate in MoveIt
+## To Plan in MoveIt
 
-To simulate the robot in MoveIt launch the following:
+To Plan the robot in MoveIt launch the following:
 
 
   ```
