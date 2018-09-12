@@ -79,13 +79,13 @@ To simulate the robot in MoveIt launch the following:
 
 ## To Plan in MoveIt and Simulate the trajectroy in  Gazebo
 
-To simulate the robot in MoveIt launch the following:
+1. For Position Mode launch the following:
 
 Open up a terminal, then launch the following:
 
 
   ```
-  roslaunch iiwa_description gazebo.launch 
+  roslaunch iiwa_controllers gazebo_traj_position.launch   
   ```
 
 Open up another terminal, then launch the following:
@@ -95,6 +95,32 @@ Open up another terminal, then launch the following:
   roslaunch iiwa_moveit_config iiwa_planning_execution.launch 
   ``` 
   
+2. For Effort Mode, launch the following:
+
+Open the file ```\iiwa_moveit_config\config\trajectory_execution.launch.xml'``` change the following line
+
+  ``` 
+  <arg name="moveit_controller_manager" default="iiwa7" />
+  <include file="$(find iiwa_moveit_config)/launch/$(arg moveit_controller_manager)_moveit_traj_position_controller_manager.launch.xml" />
+  ```
+into this:
+
+  ``` 
+  <arg name="moveit_controller_manager" default="iiwa7" />
+  <include file="$(find iiwa_moveit_config)/launch/$(arg moveit_controller_manager)_moveit_traj_effort_controller_manager.launch.xml" />
+  ```
+then launch, these files:
+
+ ```
+  roslaunch iiwa_controllers gazebo_traj_effort.launch   
+
+  roslaunch iiwa_moveit_config iiwa_planning_execution.launch 
+  ``` 
+
+
+
+
+
 ## To Do list
 
 * Enable effort control for each joints with MoveIt-Gazebo setup.
