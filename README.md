@@ -122,6 +122,7 @@ then launch, these files:
 ## To Do list
 
 * Check why Gazebo-Moveit setup is not working in effort mode ?.
+* Try to implement impedance control and gravity compensation
 * Follow these tutorial below:
 
     1. [ROS Control + Gazebo](http://gazebosim.org/tutorials/?tut=ros_control)
