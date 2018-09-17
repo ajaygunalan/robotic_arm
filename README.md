@@ -31,12 +31,12 @@ For Gazebo launch the following:
 
 ## To Control in Gazebo
 
-1. To control individual joints in position mode, launch the following:
+1. To control individual joints in position mode launch the following:
 
   ```
    roslaunch iiwa_controllers gazebo_joint_position.launch 
   ```
-And the publish the position value to the desired joint (say joint 1) by:
+Then publish the position value of the desired joint (say joint 1) by:
 
   ```
    rostopic pub /iiwa/joint1_position_controller/command std_msgs/Float64  -- 10.0
@@ -47,7 +47,7 @@ And the publish the position value to the desired joint (say joint 1) by:
   ```
    roslaunch iiwa_controllers gazebo_effort_position.launch
   ``` 
-And the publish the effort value to the desired joint (say joint 1) by:
+Then publish the effort value of the desired joint (say joint 1) by:
 
   ```
    rostopic pub /iiwa/joint1_effort_controller/command std_msgs/Float64  -- 10.0
